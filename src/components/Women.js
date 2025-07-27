@@ -1,10 +1,10 @@
 // Women.js
-import React from 'react';
-import { Route, Link, useRouteMatch } from 'react-router-dom';
-import Grooming from './categories/Grooming';
-import Shirt from './categories/Shirt';
-import Trouser from './categories/Trouser';
-import Jewellery from './categories/Jewellery';
+import React from "react";
+import { Route, Link, useRouteMatch } from "react-router-dom";
+import Grooming from "./categories/Grooming";
+import Shirt from "./categories/Shirt";
+import Trouser from "./categories/Trouser";
+import Jewellery from "./categories/Jewellery";
 
 function Women() {
   let { path, url } = useRouteMatch();
@@ -14,12 +14,27 @@ function Women() {
       <h2>Women's Section</h2>
       <ul>
         <ul>
-  <li><Link data-testid="link-grooming" to={`${url}/grooming`}>Grooming</Link></li>
-  <li><Link data-testid="link-shirt" to={`${url}/shirt`}>Shirt</Link></li>
-  <li><Link data-testid="link-trouser" to={`${url}/trouser`}>Trouser</Link></li>
-  <li><Link data-testid="link-jewellery" to={`${url}/jewellery`}>Jewellery</Link></li>
-</ul>
-
+          <li>
+            <Link data-testid="link-grooming" to={`${url}/grooming`}>
+              Grooming
+            </Link>
+          </li>
+          <li>
+            <Link data-testid="link-shirt" to={`${url}/shirt`}>
+              Shirt
+            </Link>
+          </li>
+          <li>
+            <Link data-testid="link-trouser" to={`${url}/trouser`}>
+              Trouser
+            </Link>
+          </li>
+          <li>
+            <Link data-testid="link-jewellery" to={`${url}/jewellery`}>
+              Jewellery
+            </Link>
+          </li>
+        </ul>
       </ul>
 
       <Switch>
@@ -28,7 +43,6 @@ function Women() {
         <Route path={`${path}/trouser`} component={Trouser} />
         <Route path={`${path}/jewellery`} component={Jewellery} />
       </Switch>
-      
     </div>
   );
 }
