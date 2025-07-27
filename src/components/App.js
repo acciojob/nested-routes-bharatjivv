@@ -7,6 +7,7 @@ function App() {
   return (
     <main>
       <div>
+        <h3>Index</h3>
 <Router>
         <nav>
           <ul>
