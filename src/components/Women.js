@@ -21,7 +21,7 @@ function Women() {
            </Link>
          </li>
          <li>
-           <Link  to={`${url}/shirt`}>
+           <Link  to={`${url}/Shirt`}>
              Shirt
            </Link>
          </li>

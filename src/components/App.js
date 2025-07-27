@@ -5,19 +5,28 @@ import Women from "./Women";
 
 function App() {
   return (
-    <Router>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li> 
-          <li><Link to="/women">Women</Link></li>
-        </ul>
-      </nav>
+    <main>
+      <div>
+<Router>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/women">Women</Link>
+            </li>
+          </ul>
+        </nav>
 
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/women" component={Women} />
-      </Switch>
-    </Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/women" component={Women} />
+        </Switch>
+      </Router>
+      </div>
+      
+    </main>
   );
 }
 
