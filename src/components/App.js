@@ -1,14 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Home from './Home';
-import Women from './Women';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Home from "./Home";
+import Women from "./Women";
 
 function App() {
   return (
     <Router>
       <nav>
-        <Link to="/">Home</Link> |{' '}
-        <Link to="/women">Women</Link>
+        <ul>
+          <li><Link to="/">Home</Link></li> 
+          <li><Link to="/women">Women</Link></li>
+        </ul>
       </nav>
 
       <Switch>
