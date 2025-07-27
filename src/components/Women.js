@@ -13,16 +13,22 @@ function Women() {
     <div>
       <h2>Women's Section</h2>
       <ul>
-        <li><Link to={`${url}/grooming`}>Grooming</Link></li>
-        <li><Link to={`${url}/shirt`}>Shirt</Link></li>
-        <li><Link to={`${url}/trouser`}>Trouser</Link></li>
-        <li><Link to={`${url}/jewellery`}>Jewellery</Link></li>
+        <ul>
+  <li><Link data-testid="link-grooming" to={`${url}/grooming`}>Grooming</Link></li>
+  <li><Link data-testid="link-shirt" to={`${url}/shirt`}>Shirt</Link></li>
+  <li><Link data-testid="link-trouser" to={`${url}/trouser`}>Trouser</Link></li>
+  <li><Link data-testid="link-jewellery" to={`${url}/jewellery`}>Jewellery</Link></li>
+</ul>
+
       </ul>
 
-      <Route path={`${path}/grooming`} component={Grooming} />
-      <Route path={`${path}/shirt`} component={Shirt} />
-      <Route path={`${path}/trouser`} component={Trouser} />
-      <Route path={`${path}/jewellery`} component={Jewellery} />
+      <Switch>
+        <Route path={`${path}/grooming`} component={Grooming} />
+        <Route path={`${path}/shirt`} component={Shirt} />
+        <Route path={`${path}/trouser`} component={Trouser} />
+        <Route path={`${path}/jewellery`} component={Jewellery} />
+      </Switch>
+      
     </div>
   );
 }
